@@ -129,6 +129,15 @@ When two bodies get in contact, the static chage with balance between both (e.g.
 
 The motor cage will act as a capacitor, storing evermore energy. At the critical point, the cage will discharge to the shortest path it could find, meaning the motor windings, or maybe the driver itself, which is quite close to the cage.
 
+### The belts
+Trinamic reminds that belts are cause of static charges.
+
+Although, it was quite a surprise when I did measure their resistance on my Troodon 2.0 (Voron 2.4):
+- ohm meter: ~ 6 MΩ
+- megohm meter (250 ~ 1000V): < 1 MΩ
+
+Since the chassis is grounded to mains earth, belts don't seem to be the cause of the problem. Pulleys, bearings and screws are conductive enough to dissipate the charge during printing, even if pulleys are part of the charge. This was confirmed by measuring the static charge of the belts while printing, with < 200V.
+
 ## The randomness of the cause
 Static charges dissipate naturally in the air, depending on its humidity. But when a dryer is used, the air loses its ability to dissipate the charge, increasing the risk of an overload.
 
