@@ -177,6 +177,7 @@ First of all, the chassis must be connected to the mains earth, as well as the b
 The DC minus (0V) of the power supply is usually not connected to earth, which poses a problem. In the event of an ESD, the mass available to absorb the discharge is limited to the power supply, cables, and electronic circuits, and can cause severe damage. Since I'm not an electronics engineer, I asked a professional for advice if we can connect the DC minus to earth. He had no objections, and recommended to do it.
 
 # References
-- https://github.com/bigtreetech/EBB/issues/28
+- https://github.com/bigtreetech/EBB/issues/28 (SB2240 undervoltage)
+- https://github.com/bigtreetech/EBB/issues/47 (SB2209 reset)
 - https://klipper.discourse.group/t/tmc-extruder-reports-error-gstat-00000001-reset-1-reset/1156/25
 - https://www.professionalplastics.com/professionalplastics/ElectricalPropertiesofPlastics.pdf
