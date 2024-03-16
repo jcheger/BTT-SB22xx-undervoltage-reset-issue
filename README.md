@@ -90,7 +90,16 @@ Keywords:
 - plastic housings and belt drive (Steathburner is often made of ABS)
 - attaching all conductive parts, especially the motors themselves to PCB ground
 
-## Between the hotend and the bed
+### The belts
+Trinamic reminds that belts are cause of static charges.
+
+Although, it was quite a surprise when I did measure their resistance on my Troodon 2.0 (Voron 2.4):
+- ohm meter: ~ 6 MΩ
+- megohm meter (250 ~ 1000V): < 1 MΩ
+
+Since the chassis is grounded to mains earth, belts don't seem to be the cause of the problem. Pulleys, bearings and screws are conductive enough to dissipate the charge during printing, even if pulleys are part of the charge. This was confirmed by measuring the static charge of the belts while printing, with < 200V.
+
+### Between the hotend and the bed
 The heater of the bed is usually directly powered by the mains, and the bed must absolutely be connected the the mains earth. On the hotend side, plastic usually has a lower resistance when melted. In such situation, the hotend has a quite good conductive path to the bed and ground.
 
 I could not measure any charge above 200V on the head while printing, which is a normal value in the air.
@@ -128,15 +137,6 @@ Please note that the TMC2240 is ESD-protected, but not for strong or long spikes
 When two bodies get in contact, the static chage with balance between both (e.g. a spark from a car handle). But the balancing speed depends on the resistance of the material (e.g. car handles don't trigger spark anymore since they are painted). Plastics have a resistance of more than 10^15 Ohms, considered as insulating. When the plastic gets in contact with metal, which is higly conductive, the energy will travel to the shortest path, the motor cage in this case (which is in contact with the gears).
 
 The motor cage will act as a capacitor, storing evermore energy. At the critical point, the cage will discharge to the shortest path it could find, meaning the motor windings, or maybe the driver itself, which is quite close to the cage.
-
-### The belts
-Trinamic reminds that belts are cause of static charges.
-
-Although, it was quite a surprise when I did measure their resistance on my Troodon 2.0 (Voron 2.4):
-- ohm meter: ~ 6 MΩ
-- megohm meter (250 ~ 1000V): < 1 MΩ
-
-Since the chassis is grounded to mains earth, belts don't seem to be the cause of the problem. Pulleys, bearings and screws are conductive enough to dissipate the charge during printing, even if pulleys are part of the charge. This was confirmed by measuring the static charge of the belts while printing, with < 200V.
 
 ## The randomness of the cause
 Static charges dissipate naturally in the air, depending on its humidity. But when a dryer is used, the air loses its ability to dissipate the charge, increasing the risk of an overload.
