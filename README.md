@@ -54,7 +54,7 @@ I did try on my own, whithout any success. I don't have the knowledge to know wh
 ## Using a driver on the mainboard is the solution
 **$\color{green}{\textsf{True}}$** - This solution seems fairly obvious, since before installing SB22xx, there were no errors.
 
-However, that doesn't seem quite as true as it sounds. I've read in some forums (e.g. [#96](https://github.com/bigtreetech/EBB/issues/96)) that the problem has also been seen, rarely, on mainboards. But there could be many other causes, such as bad wiring.
+However, that doesn't seem quite as true as it sounds. I've read in some forums (e.g. [#96](https://github.com/bigtreetech/EBB/issues/96) ?) that the problem has also been seen, rarely, on mainboards. But there could be many other causes, such as bad wiring.
 
 As the final clue is an ESD issue, this problem should be solved first. Even minimized by the cables length, ESD is destructive for electronics.
 
