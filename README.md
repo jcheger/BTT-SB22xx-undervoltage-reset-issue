@@ -125,7 +125,7 @@ Please note that the TMC2240 is ESD-protected, but not for strong or long spikes
 
 > The TMC2240 motor phase output pins are protected up to 8kV HBM in the application when using a bypass capacitor of at least 1uF on the positive voltage supply (VS pins).
 
-When two bodies get in contact, the static chage with balance between both (e.g. a spark from a car handle). But the balancing speed depends on the resistance of the material (e.g. car handles don't trigger spark anymore since they are painted). Plastics have a resistance of more than 10^15 Ohms, considered as insulating. When the plasic gets in contact with metal, which is higly conductive, the energy will travel to the shortest path, the motor cage in this case (which is in contact with the gears).
+When two bodies get in contact, the static chage with balance between both (e.g. a spark from a car handle). But the balancing speed depends on the resistance of the material (e.g. car handles don't trigger spark anymore since they are painted). Plastics have a resistance of more than 10^15 Ohms, considered as insulating. When the plastic gets in contact with metal, which is higly conductive, the energy will travel to the shortest path, the motor cage in this case (which is in contact with the gears).
 
 The motor cage will act as a capacitor, storing evermore energy. At the critical point, the cage will discharge to the shortest path it could find, meaning the motor windings, or maybe the driver itself, which is quite close to the cage.
 
