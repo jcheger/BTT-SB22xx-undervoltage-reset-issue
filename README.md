@@ -1,7 +1,7 @@
 # Introduction
 BTT SB22xx boards suffer from a recurring problem, crashing the print:
-- SB2209: `GSTAT: 00000001 reset=1(Reset)`
-- SB2240: `GSTAT: 00000004 uv_cp=1 (undervoltage!)`
+- SB2209: `"TMC 'extruder' reports error: GSTAT: 00000001 reset=1(Reset)`
+- SB2240: `"TMC 'extruder' reports error: GSTAT: 00000004 uv_cp=1 (undervoltage!)`
 
 It's quite possible to print for hundreds of hours without any problems, and then, at random, have this failure several times in a row. A few hours later, the problem may have disappeared without explanation.
 
