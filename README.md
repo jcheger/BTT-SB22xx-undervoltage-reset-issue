@@ -161,14 +161,13 @@ Most plastics that we print have a resistance > 10^15 Ohms*cm, highly insulative
 Filaments that are ESD specific, or some with CF (Carbon Fiber) are in the range of "antistatic". Some may even be low enough to be conductive. 
 
 ## Solution
-Assuming that the power supply and wiring are not at fault, the solution is to **pull a dedicated cable from the extruder motor cage to earth**.  [Trinamic's manual](https://www.analog.com/media/en/technical-documentation/data-sheets/tmc2240_datasheet.pdf) recommends a wire between the cage and the PCB ground (minus of the power supply), but I have a problem with this solution, unless connecting the minus to the earth (see next topic).
+Assuming that the power supply and wiring are not at fault, the solution is to **pull a dedicated cable from the extruder motor cage to earth**.  [Trinamic's manual](https://www.analog.com/media/en/technical-documentation/data-sheets/tmc2240_datasheet.pdf) recommends a wire between the cage and the PCB ground (minus of the power supply). But I'm not confident with this solution (see next topic, regarding ground).
 
-Since then, I've been able to print several hundreds of hours without the slightest problem, which is huge improvement. [Several people have reported similar results in the ticket on GitHub](https://github.com/bigtreetech/EBB/issues/28).
+Since I did pull a wire from the extruder motor cage to mains earth, I've been able to print several hundreds of hours without the slightest problem, a huge improvement. [Several people have reported similar results in the ticket on GitHub](https://github.com/bigtreetech/EBB/issues/28).
 
-But let's not claim victory too soon. If this is not enough, there are still other tracks to explore around ESD:
-- connecting the DC minus to ground (see next topic)
-- printing some back parts of the StealthBurner with ESD or CF filament (not good as grounding the motor with a wire)
-- shielding the driver (which also requires a connection to ground)
+But let's not claim victory too soon. If this is not enough, there are still other ideas to explore around ESD:
+- printing some back parts of the StealthBurner with ESD or CF filament (not good as grounding the motor with a wire, but could help dissipating into the gantry)
+- shielding the driver
 - installing capacitors on the driver output, in order to absorb higher spikes, as described in the [Figure 36 of Trinamic's manual](https://www.analog.com/media/en/technical-documentation/data-sheets/tmc2240_datasheet.pdf).
 
 In the event of deadlock, there are still these solutions:
@@ -183,7 +182,19 @@ The term of "ground" is a subject of misunderstanding, because it is used in thr
 
 First of all, the chassis must be connected to the mains earth, as well as the bed (with a dedicated cable). The electrical resistance between segments of the frame is not null, usually few ohms. It is not perfect for security, but good enough for dissipating static charges. Allthough, the conductivity in the frame is not enough for absorbing spikes from the motor cage, which also requires a dedicated cable (trust me, I've made the test).
 
-The DC minus (0V) of the power supply is usually not connected to earth, which poses a problem. In the event of an ESD, the mass available to absorb the discharge is limited to the power supply, cables, and electronic circuits, and can cause severe damage. Since I'm not an electronics engineer, I asked a professional for advice if we can connect the DC minus to earth. He had no objections, and recommended to do it.
+The DC minus (0V) of the power supply is usually not connected to earth. In the event of an ESD, the mass available to absorb the discharge is limited to the power supply, cables, and electronic circuits, and can cause severe damage. Since I'm not an electronics engineer, I asked a professional for advice if we can connect the DC minus to earth, and he had no objections. Although, I did ask Chat GPT:
+
+> May be connect the DC 0V to mains earth, regarding EU regulation ?
+
+> Connecting the DC 0V (negative terminal) of a switching power supply to mains earth is generally not permitted under EU regulations and is not considered a standard practice in electrical installations. In the EU, electrical safety regulations are designed to minimize the risk of electric shock, fire, and other hazards.
+>
+> The European Union's Low Voltage Directive (Directive 2014/35/EU) and other related standards emphasize safe electrical design and installation practices. Typically, connecting the negative terminal of a DC power supply to mains earth can introduce safety risks and is likely to be non-compliant with these regulations.
+>
+> Furthermore, connecting the negative terminal of a DC power supply to mains earth can create potential safety hazards such as short circuits, electrical shocks, and interference with other electrical devices.
+>
+> It's essential to adhere to EU regulations and standards when designing and installing electrical systems and equipment. If there are specific circumstances where such a connection is necessary, it's crucial to consult with electrical safety authorities or professionals to ensure compliance and mitigate any associated risks.
+
+There is clearly a risk, depending on how the area has been earthed. From my point of view, I prefer to pull an independent wire to ground and take no risk. And as long as the problem seems to have stabilized, I don't see the point of doing so.
 
 # References
 - https://github.com/bigtreetech/EBB/issues/28 (SB2240 undervoltage)
