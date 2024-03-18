@@ -15,7 +15,7 @@ Comments are welcome, but only constructive remarks. At this stage, the solution
 
 # Rumors and beliefs
 
-## BTT lack any support
+## BTT's support is deplorable
 **$\color{green}{\textsf{True}}$** - I did get very few answers from BTT, after sending an exhaustive report, for which they complimented me. But since then they've given no sign of life, ignoring all requests to join our efforts. Now I've decided to invest my time in the community, and they can go to hell (actually, at the moment, we're the ones who are).
 
 ## SB22xx is a piece of c...
