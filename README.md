@@ -174,6 +174,14 @@ In the event of deadlock, there are still these solutions:
 - use a driver from the motherboard
 - tune the sensitivity of the TMC (only applies to TMC2240)
 
+### Groundind to earth
+![](https://github.com/jcheger/BTT-SB22xx-undervoltage-reset-issue/blob/main/sb22xx%20-%20extruder%20motor%20grounded%20to%20earth.webp)
+
+### Grounding to minus of the power supply
+As suggested by [Trinamic's manual](https://www.analog.com/media/en/technical-documentation/data-sheets/tmc2240_datasheet.pdf).
+
+![](https://github.com/jcheger/BTT-SB22xx-undervoltage-reset-issue/blob/main/sb22xx%20-%20extruder%20motor%20grounded%20to%20minus.webp)
+
 ## Misunderstanding of the term "ground"
 The term of "ground" is a subject of misunderstanding, because it is used in three different meanings:
 - the mains earth - the real ground
